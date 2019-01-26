@@ -8,7 +8,7 @@
     <header class="main-header">
       <div class="logo">
         <a class="main-header-logo">
-          <img src="img/logo.svg" alt="Логотип интернет-магазина гаджетов Девайс">
+          <img src="img/logo.svg" width="163" height="35" alt="Логотип интернет-магазина гаджетов Девайс">
         </a>
       </div>
       <nav class="main-navigation">
@@ -19,7 +19,16 @@
           <li><a class="shopping-cart" href="#">Корзина</a></li>
         </ul>
         <ul class="site-navigation">
-          <li><a href="#">Каталог товаров</a></li>
+          <li><a href="#">Каталог товаров</a>
+            <ul>
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+              <li><a href="monopods.html">Моноподы для селфи</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Гарантия</a></li>
           <li><a href="#">Контакты</a></li>
@@ -74,10 +83,10 @@
       <section class="partners">
         <h2 class="visually-hidden">Наши партнеры</h2>
         <ul>
-          <li><a href="#">DJI</a></li>
-          <li><a href="#">SP Gadgets</a></li>
-          <li><a href="#">GoPro</a></li>
-          <li><a href="#">VIVE</a></li>
+          <li><a href="#"><img src="img/logo-1.png" width="260" height="100" alt="DJI"></a></li>
+          <li><a href="#"><img src="img/logo-2.png" width="260" height="100" alt="SP Gadgets"></a></li>
+          <li><a href="#"><img src="img/logo-3.png" width="260" height="100" alt="GoPro"></a></li>
+          <li><a href="#"><img src="img/logo-4.png" width="260" height="100" alt="VIVE"></a></li>
         </ul>
       </section>
       <section class="about-company">
@@ -96,7 +105,7 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <div class="map">
           <a href="#">
-            <img src="img/map.jpg" alt="Карта проезда">
+            <img src="img/map.png" width="560" height="222" alt="Карта проезда">
           </a>
         </div>
         <a class="feedback" href="feedback.html">Напишите нам</a>
@@ -142,5 +151,24 @@
         </a>
       </div>
     </footer>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="feedback-user-name">Ваше имя</label>
+          <input id="feedback-user-name" type="text" name="feedback-user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="feedback-user-email">Ваш e-mail</label>
+          <input id="feedback-user-email" type="text" name="feedback-user-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="feedback-message">Текст письма</label>
+          <textarea id="feedback-message" name="feedback-message" rows="6" cols="80" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>
