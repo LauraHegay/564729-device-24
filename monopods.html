@@ -30,11 +30,61 @@
   <ul class="breadcrumbs">
     <li><a href="index.html">Главная</a> &gt; </li>
     <li><a href="#">Каталог товаров</a> &gt; </li>
-    <li class="breadcrumbs-current"><a href="Моноподы для селфи">Моноподы для селфи</a></li>
+    <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
   </ul>
   <section class="filters">
     <h2>Фильтр:</h2>
-    <!--Здесь будет форма для фильтра товаров -->
+    <form class="filter" action="https://echo.htmlacademy.ru" method="get" >
+      <fieldset>
+        <legend>Стоимость</legend>
+        <label class="min-price">от
+          <input type="text" name="min-price" value="0" placeholder="0">
+        </label>
+        <label class="max-price">до
+          <input type="text" name="max-price" value="5000" placeholder="5000">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Цвет</legend>
+        <ul>
+          <li>
+            <input class="filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black">
+            <label for="filter-black">Черный</label>
+          </li>
+          <li>
+            <input class="filter-input filter-input-checkbox" type="checkbox" name="white" id="filter-white">
+            <label for="filter-white">Белый</label>
+          </li>
+          <li>
+            <input class="filter-input filter-input-checkbox" type="checkbox" name="blue" id="filter-blue">
+            <label for="filter-blue">Синий</label>
+          </li>
+          <li>
+            <input class="filter-input filter-input-checkbox" type="checkbox" name="red" id="filter-red">
+            <label for="filter-red">Красный</label>
+          </li>
+          <li>
+            <input class="filter-input filter-input-checkbox" type="checkbox" name="pink" id="filter-pink">
+            <label for="filter-pink">Розовый</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Bluetooth</legend>
+        <ul>
+          <li>
+            <input class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" id="bluetooth-
+exists" value="есть">
+            <label for="bluetooth-
+exists">Есть</label>
+          </li>
+          <li>
+            <input class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" id="bluetooth-not-exist" value="нет">
+            <label for="bluetooth-not-exist">Нет</label>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
   </section>
   <section class="sort">
     <h2>Сортировка:</h2>
