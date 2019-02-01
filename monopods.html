@@ -38,10 +38,10 @@
       <fieldset>
         <legend>Стоимость</legend>
         <label class="min-price">от
-          <input type="text" name="min-price" value="0" placeholder="0">
+          <input type="number" name="min-price" value="0" placeholder="0">
         </label>
         <label class="max-price">до
-          <input type="text" name="max-price" value="5000" placeholder="5000">
+          <input type="number" name="max-price" value="5000" placeholder="5000">
         </label>
       </fieldset>
       <fieldset>
@@ -73,10 +73,8 @@
         <legend>Bluetooth</legend>
         <ul>
           <li>
-            <input class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" id="bluetooth-
-exists" value="есть">
-            <label for="bluetooth-
-exists">Есть</label>
+            <input class="filter-input filter-input-radio" id="bluetooth-exists" type="radio" name="filter-bluetooth"  value="есть">
+            <label for="bluetooth-exists">Есть</label>
           </li>
           <li>
             <input class="filter-input filter-input-radio" type="radio" name="filter-bluetooth" id="bluetooth-not-exist" value="нет">
