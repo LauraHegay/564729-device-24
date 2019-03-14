@@ -59,6 +59,8 @@ input[type="radio"].visually-hidden {
     width: 1160px;
     margin: 0 auto;
     padding: 0;
+
+    outline: 2px solid green;
 }
 
 .main-header {
@@ -71,6 +73,7 @@ input[type="radio"].visually-hidden {
     padding-right: 60px;
 
     background-image: linear-gradient(to bottom, #ffffff 12%, #f7e296 12%, #f7e296 100%);
+    outline: 2px solid green;
 }
 
 .main-header-logo:hover {
@@ -817,6 +820,8 @@ input[type="radio"].visually-hidden {
     width: 1440px;
     margin: 0 auto;
     padding: 0;
+
+    outline: 2px solid crimson;
 }
 
 .inner-wrapper .wrapper {
