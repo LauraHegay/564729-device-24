@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="site-wrapper">
@@ -17,14 +18,12 @@
         </div>
         <nav class="main-navigation">
           <ul class="user-navigation">
-            <li><a class="search" href="#">Поиск по сайту</a>
-              <section class="modal modal-search">
-                <form action="https://echo.htmlacademy.ru" method="get">
-                  <label for="search">Поиск по сайту</label>
-                  <input type="text" name="search" id="search">
-                  <button class="button" type="submit">Найти</button>
+            <li>
+                <form class="search" action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="search">Поиск по сайту</label>
+                  <input type="text" name="search" id="search" placeholder="Поиск по сайту">
+                    <button class="search-button" type="submit">Найти</button>
                 </form>
-              </section>
             </li>
             <li><a class="login-link" href="#">Войти</a></li>
             <li><a class="compare" href="#">Сравнить</a></li>
@@ -35,10 +34,14 @@
               <div class="wrapper">
                 <ul class="submenu-list">
                   <li class="submenu-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="submenu-item"><a href="#">Моноподы для селфи</a></li>
+                  <li class="submenu-item"><a href="monopods.html">Моноподы для селфи</a></li>
                   <li class="submenu-item"><a href="#">Экшн-камеры</a></li>
-                  <li class="submenu-item"><a href="monopods.html">Фитнес-браслеты</a></li>
+                </ul>
+                <ul class="submenu-list">
+                  <li class="submenu-item"><a href="#">Фитнес-браслеты</a></li>
                   <li class="submenu-item"><a href="#">Умные часы</a></li>
+                </ul>
+                <ul class="submenu-list">
                   <li class="submenu-item"><a href="#">Квадрокоптеры</a></li>
                 </ul>
               </div>
@@ -63,7 +66,7 @@
           <ul class="slider-list">
             <li class="slider-item">
               <div class="slider-item-content">
-                <h3>Делай селфи, как Бен Стиллер!</h3>
+                <h3>Делай селфи,<br> как Бен Стиллер!</h3>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
                 <a class="slider-item-button button" href="#">Подробнее</a>
                 <table>
@@ -183,20 +186,14 @@
         <section class="services">
           <h2 class="visually-hidden">Услуги</h2>
           <div class="container">
-            <!--<input class="visually-hidden" type="radio" id="service-1" name="toggle" checked>-->
-            <!--<input class="visually-hidden" type="radio" id="service-2" name="toggle">-->
-            <!--<input class="visually-hidden" type="radio" id="service-3" name="toggle">-->
-            <!--<ul class="services-list">-->
-              <!--<li class="services-item button">-->
-                <!--<label class="slider-controls-item slider-controls-item&#45;&#45;1" for="service-1">Доставка</label>-->
-              <!--</li>-->
-              <!--<li class="services-item button">-->
-                <!--<label class="slider-controls-item slider-controls-item&#45;&#45;1" for="service-1">Гарантия</label>-->
-              <!--</li>-->
-              <!--<li class="services-item button">-->
-                <!--<label class="slider-controls-item slider-controls-item&#45;&#45;1" for="service-1">Кредит</label>-->
-              <!--</li>-->
-            <!--</ul>-->
+            <input class="visually-hidden"  type="radio" id="service-1" name="toggle2" checked>
+            <input class="visually-hidden"  type="radio" id="service-2" name="toggle2">
+            <input class="visually-hidden"  type="radio" id="service-3" name="toggle2">
+            <div class="services-controls">
+              <label class="services-controls-item services-controls-item--1 button" for="service-1">Доставка</label>
+              <label class="services-controls-item services-controls-item--2 button" for="service-2">Гарантия</label>
+              <label class="services-controls-item services-controls-item--3 button" for="service-3">Кредит</label>
+            </div>
             <ul class="services-slider-list">
               <li class="services-slider-item">
                 <h3>Доставка</h3>
