@@ -54,8 +54,8 @@ input[type="radio"].visually-hidden {
     margin: 0;
     margin-top: 35px;
     margin-bottom: 20px;
+    margin-left: 60px;
     padding: 0;
-    padding-left: 200px;
     font-family: "gilroyextrabold", "Arial", sans-serif;
     font-size: 47px;
     font-weight: 400;
@@ -69,7 +69,7 @@ input[type="radio"].visually-hidden {
 }
 
 .site-wrapper {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -137,11 +137,13 @@ input[type="radio"].visually-hidden {
 
 .user-navigation .login-link,
 .user-navigation .compare,
-.user-navigation .shopping-cart {
+.user-navigation .shopping-cart,
+.user-navigation .login-user-name {
     position: relative;
 }
 
-.user-navigation .login-link::before {
+.user-navigation .login-link::before,
+.user-navigation .login-user-name::before {
     content: "";
 
     position: absolute;
@@ -214,6 +216,12 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.inner-user-navigation .compare {
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+}
+
 .user-navigation .login-link {
     margin: 0;
     margin-right: 5px;
@@ -226,6 +234,13 @@ input[type="radio"].visually-hidden {
     padding: 0;
 }
 
+.user-navigation .login-user-name {
+    padding-left: 15px;
+}
+
+.user-navigation .login-exit {
+    padding-left: 15px;
+}
 .user-navigation .shopping-cart {
     margin: 0;
     margin-left: 0;
@@ -364,8 +379,8 @@ input[type="radio"].visually-hidden {
     flex-wrap: wrap;
     margin: 0;
     margin-bottom: 44px;
+    margin-left: 60px;
     padding: 0;
-    padding-left: 200px;
     list-style: none;
 }
 
@@ -443,6 +458,21 @@ input[type="radio"].visually-hidden {
     padding: 0;
 
     list-style: none;
+}
+
+.product-item:nth-child(4)::before {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    width: 60px;
+    height: 61px;
+
+    background-image: url("../img/new.png");
+    background-repeat: no-repeat;
+    background-position: 0 0
 }
 
 .product-item:hover .product-item-hover {
@@ -531,7 +561,7 @@ input[type="radio"].visually-hidden {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-bottom: 43px;
+    margin-bottom: 42px;
 }
 
 .product-item p,
@@ -546,7 +576,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-item h3 {
-    width: 245px;
+    width: 260px;
     margin: 0;
     padding: 0;
 
@@ -701,6 +731,7 @@ input[type="radio"].visually-hidden {
 .contacts h2 {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
     margin-bottom: 42px;
     font-family: "gilroyextrabold", "Arial", sans-serif;
     font-size: 47px;
@@ -777,6 +808,8 @@ input[type="radio"].visually-hidden {
     margin-top: 40px;
     margin-bottom: 59px;
     padding: 0;
+
+    background-color: #ebebeb;
 }
 
 .about-company ul {
@@ -826,7 +859,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-wrapper {
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     padding-top: 63px;
@@ -904,7 +937,7 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
-.secondary-user-navigation .login-link,
+.inner-secondary-user-navigation .login-user-name,
 .secondary-user-navigation .compare,
 .secondary-user-navigation .shopping-cart {
     position: relative;
@@ -992,6 +1025,34 @@ input[type="radio"].visually-hidden {
 .secondary-site-navigation a:focus,
 .secondary-site-navigation a:active {
     opacity: 0.3;
+}
+
+.wrapper-top .inner-secondary-user-navigation {
+    width: 450px;
+}
+
+.inner-secondary-user-navigation .compare {
+    padding-left: 0;
+}
+
+.inner-secondary-user-navigation span {
+    padding-right: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.inner-secondary-user-navigation .login-user-name::before {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: -27px;
+
+    width: 13px;
+    height: 12px;
+
+    background-image: url("../img/user - footer.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .address,
@@ -1107,7 +1168,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls {
     position: absolute;
-    left: 78%;
+    left: 71%;
     top: 53%;
     z-index: 100;
 
@@ -1124,6 +1185,7 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     display: inline-block;
+    vertical-align: middle;
     padding: 8px;
     width: 18px;
     height: 18px;
@@ -1353,23 +1415,56 @@ input[type="radio"].visually-hidden {
 }
 
 .inner-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    width: 100%;
     display: flex;
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0;
 }
 
-.inner-wrapper-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 976px;
+.column1,
+.column2 {
+    position: relative;
+}
+
+.column1 {
+    background-color: #eeeeee;
+    flex-grow: 1;
+}
+
+.column1::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    opacity: .08;
+}
+
+.column2 {
+    flex-grow: 1;
+}
+
+.column2::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    opacity: .08;
+}
+
+.width1 {
+    width: 268px;
+    margin-left: auto;
+}
+
+.width2 {
+    width: 774px;
+    margin-right: auto;
 }
 
 .sort {
@@ -1377,11 +1472,9 @@ input[type="radio"].visually-hidden {
     display: -ms-flexbox;
     display: flex;
     margin: 0;
-    margin-bottom: 65px;
+    margin-bottom: 77px;
     padding: 0;
-    min-height: 75px;
-
-    background-color: #ebebeb;
+    /*min-height: 75px;*/
 }
 
 .sort h2 {
@@ -1390,6 +1483,8 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-list {
+    position: relative;
+
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1398,8 +1493,37 @@ input[type="radio"].visually-hidden {
     -ms-flex-line-pack: center;
     align-content: center;
     margin: 0;
+    margin-top: 5px;
     padding: 0;
     list-style: none;
+}
+
+.sort-list::after {
+    content: "";
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+    right: -240px;
+    top: 26px;
+
+    background-image: url("../img/icon-down-dir.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.sort-list::before {
+    content: "";
+    position: absolute;
+
+    width: 11px;
+    height: 11px;
+    right: -210px;
+    top: 26px;
+
+    background-image: url("../img/icon-up-dir.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .sort-list li {
@@ -1433,13 +1557,6 @@ input[type="radio"].visually-hidden {
     line-height: 24px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-}
-
-.filters {
-    padding-left: 200px;
-    background-image: -webkit-linear-gradient(top, #dcdcdc 75px, #efefef 75px, #efefef 100%);
-    background-image: -o-linear-gradient(top, #dcdcdc 75px, #efefef 75px, #efefef 100%);
-    background-image: linear-gradient(to bottom, #dcdcdc 75px, #efefef 75px, #efefef 100%);
 }
 
 .filters form {
@@ -1644,18 +1761,22 @@ input[type="radio"].visually-hidden {
 .filters .button {
     width: 200px;
     min-height: 40px;
+
+    background-image: linear-gradient(to bottom, #efefef 17px, #f0c52e 17px, #f0c52e 25px,  #efefef 25px, #efefef 42px);
 }
 
 .filters .button:hover,
 .filters .button:focus {
     color: #000000;
 
+    background-image: none;
     background-color: #f0c52e;
 }
 
 .filters .button:active {
     color: rgba(0, 0, 0, 0.6);
 
+    background-image: none;
     background-color: #f0c52e;
 }
 
@@ -1665,6 +1786,7 @@ input[type="radio"].visually-hidden {
 
 .price-controls label {
     display: inline-block;
+    vertical-align: middle;
 
     font-family: "gilroylight", "Arial", sans-serif;
     font-size: 14px;
@@ -1762,6 +1884,8 @@ input[type="radio"].visually-hidden {
 .pagination-item-current a:hover,
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
+    padding-left: 23px;
+    padding-right: 10px;
     color: #000000;
     opacity: 1;
 }
